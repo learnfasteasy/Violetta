@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkçe Macerası - LGS Hazırlık için interaktif öğrenme oyunu. 14 farklı konuda kendinizi test edin!">
+    <meta name="keywords" content="LGS, Türkçe, öğrenme oyunu, eğitim, quiz, paragraf, sözel muhakeme">
+    <meta name="author" content="Caybo">
+    <title>Türkçe Macerası - LGS Hazırlık Oyunu (14 Konu)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🎮 Türkçe Macerası</h1>
+            <p>LGS Hazırlık - 14 Konuda 70 Soru!</p>
+        </div>
+
+        <!-- Ana Menü -->
+        <div class="menu-screen active">
+            <div class="score-board">
+                <div class="score-item">
+                    <h3>Toplam Puan</h3>
+                    <p id="totalScore">0</p>
+                </div>
+                <div class="score-item">
+                    <h3>Tamamlanan</h3>
+                    <p id="completedTopics">0/14</p>
+                </div>
+                <div class="score-item">
+                    <h3>Başarı Oranı</h3>
+                    <p id="successRate">0%</p>
+                </div>
+            </div>
+
+            <h2 style="text-align: center; margin-bottom: 20px;">Bir Konu Seç ve Başla!</h2>
+            
+            <div class="topic-grid">
+                <div class="topic-card" onclick="startGame(0)">
+                    <h3>🎭 Fiilimsiler</h3>
+                    <p>İsim-fiil, sıfat-fiil, zarf-fiil</p>
+                </div>
+                <div class="topic-card" onclick="startGame(1)">
+                    <h3>🎬 Cümlenin Öğeleri</h3>
+                    <p>Yüklem, özne, nesne...</p>
+                </div>
+                <div class="topic-card" onclick="startGame(2)">
+                    <h3>⚡ Fiil Çatısı</h3>
+                    <p>Etken, edilgen, geçişli...</p>
+                </div>
+                <div class="topic-card" onclick="startGame(3)">
+                    <h3>🎪 Sözcükte Anlam</h3>
+                    <p>Gerçek, mecaz, terim anlam</p>
+                </div>
+                <div class="topic-card" onclick="startGame(4)">
+                    <h3>💬 Cümlede Anlam</h3>
+                    <p>Sebep-sonuç, amaç-sonuç...</p>
+                </div>
+                <div class="topic-card" onclick="startGame(5)">
+                    <h3>📚 Deyimler ve Atasözü</h3>
+                    <p>Deyimler vs Atasözleri</p>
+                </div>
+                <div class="topic-card" onclick="startGame(6)">
+                    <h3>📝 Cümle Çeşitleri</h3>
+                    <p>Basit, birleşik, sıralı...</p>
+                </div>
+                <div class="topic-card" onclick="startGame(7)">
+                    <h3>✍️ Yazım Kuralları</h3>
+                    <p>Büyük harf, de/da, ki...</p>
+                </div>
+                <div class="topic-card" onclick="startGame(8)">
+                    <h3>📄 Paragraf</h3>
+                    <p>Ana düşünce, yardımcı düşünce</p>
+                </div>
+                <div class="topic-card" onclick="startGame(9)">
+                    <h3>🧩 Sözel Muhakeme</h3>
+                    <p>Mantık, grafik yorumlama</p>
+                </div>
+                <div class="topic-card" onclick="startGame(10)">
+                    <h3>📍 Noktalama İşaretleri</h3>
+                    <p>Nokta, virgül, ünlem...</p>
+                </div>
+                <div class="topic-card" onclick="startGame(11)">
+                    <h3>🔧 Anlatım Bozuklukları</h3>
+                    <p>Gereksiz sözcük, mantık hatası</p>
+                </div>
+                <div class="topic-card" onclick="startGame(12)">
+                    <h3>🎨 Söz Sanatları</h3>
+                    <p>Benzetme, kişileştirme...</p>
+                </div>
+                <div class="topic-card" onclick="startGame(13)">
+                    <h3>📖 Metin Türleri</h3>
+                    <p>Masal, hikaye, makale...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oyun Ekranı -->
+        <div class="game-screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+
+            <div class="score-board">
+                <div class="score-item">
+                    <h3>Soru</h3>
+                    <p id="questionNumber">1/5</p>
+                </div>
+                <div class="score-item">
+                    <h3>Puan</h3>
+                    <p id="currentScore">0</p>
+                </div>
+                <div class="score-item">
+                    <h3>Doğru</h3>
+                    <p id="correctCount">0</p>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="questionText"></h2>
+                <div class="options" id="optionsContainer"></div>
+                <div class="explanation" id="explanation"></div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="btn" id="checkBtn" onclick="checkAnswer()">Cevabı Kontrol Et</button>
+                <button class="btn" id="nextBtn" onclick="nextQuestion()" style="display: none;">Sonraki Soru</button>
+                <button class="btn" onclick="backToMenu()">Ana Menüye Dön</button>
+            </div>
+        </div>
+
+        <!-- Sonuç Ekranı -->
+        <div class="result-screen">
+            <div class="emoji" id="resultEmoji">🎉</div>
+            <h2 id="resultTitle">Tebrikler!</h2>
+            <p id="resultMessage"></p>
+
+            <div class="result-stats">
+                <div class="stat-card">
+                    <h3>Toplam Soru</h3>
+                    <p id="totalQuestions">5</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Doğru Cevap</h3>
+                    <p id="finalCorrect">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Kazanılan Puan</h3>
+                    <p id="finalScore">0</p>
+                </div>
+            </div>
+
+            <button class="btn" onclick="backToMenu()">Ana Menüye Dön</button>
+            <button class="btn" onclick="location.reload()">Yeniden Başla</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>💜 Türkçe Macerası - LGS'ye hazırlanırken eğlen! 14 Konu • 70 Soru</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

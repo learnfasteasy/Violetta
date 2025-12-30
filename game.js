@@ -1,6 +1,6 @@
-// Oyun verileri - 16 Konu
+// Oyun verileri - 14 Konu, 140 Soru
 const topics = [
-    // KONU 1: Fiilimsiler
+    // KONU 1: Fiilimsiler (10 soru)
     {
         name: "Fiilimsiler",
         questions: [
@@ -33,10 +33,40 @@ const topics = [
                 options: ["Yürüyen adam", "Yürümek zordur", "Yürüyerek gitti", "Yürüdü"],
                 correct: 1,
                 explanation: 'Doğru! "Yürümek" bir işin adıdır, isim-fiildir.'
+            },
+            {
+                question: '"Okuyan çocuk başarılı olur." cümlesinde "okuyan" hangi fiilimsidir?',
+                options: ["İsim-fiil", "Sıfat-fiil", "Zarf-fiil", "Fiil"],
+                correct: 1,
+                explanation: 'Doğru! "Okuyan" çocuğun özelliğini anlatır, sıfat-fiildir.'
+            },
+            {
+                question: '"Sessizce odaya girdi." cümlesinde "sessizce" hangi fiilimsidir?',
+                options: ["İsim-fiil", "Sıfat-fiil", "Zarf-fiil", "Fiil değildir"],
+                correct: 2,
+                explanation: 'Doğru! "Sessizce" nasıl girdiğini anlatır, zarf-fiildir.'
+            },
+            {
+                question: '"Gülmek sağlığa iyi gelir." cümlesinde "gülmek" cümlede ne görevindedir?',
+                options: ["Özne", "Yüklem", "Nesne", "Zarf tamlayıcısı"],
+                correct: 0,
+                explanation: 'Doğru! "Ne iyi gelir?" sorusuna "Gülmek" cevabı özne olduğunu gösterir.'
+            },
+            {
+                question: 'Hangisi zarf-fiil eki değildir?',
+                options: ["-arak/-erek", "-ıp/-ip/-up/-üp", "-madan/-meden", "-mak/-mek"],
+                correct: 3,
+                explanation: 'Doğru! "-mak/-mek" isim-fiil ekidir, zarf-fiil eki değil.'
+            },
+            {
+                question: '"Düşünmeden konuşma!" cümlesinde "düşünmeden" hangi fiilimsidir?',
+                options: ["İsim-fiil", "Sıfat-fiil", "Zarf-fiil", "Mastar"],
+                correct: 2,
+                explanation: 'Doğru! "Düşünmeden" nasıl konuşmaması gerektiğini anlatır, zarf-fiildir.'
             }
         ]
     },
-    // KONU 2: Cümlenin Öğeleri
+    // KONU 2: Cümlenin Öğeleri (10 soru)
     {
         name: "Cümlenin Öğeleri",
         questions: [
@@ -69,10 +99,40 @@ const topics = [
                 options: ["Önce özne, sonra yüklem", "Önce nesne, sonra özne", "Önce yüklem, sonra özne", "Fark etmez"],
                 correct: 2,
                 explanation: 'Doğru! Altın kural: Önce patronu (yüklem), sonra işçiyi (özne) bul!'
+            },
+            {
+                question: '"Sabah erkenden kalktım." cümlesinde "sabah erkenden" hangi öğedir?',
+                options: ["Özne", "Zaman tamlayıcısı", "Yer tamlayıcısı", "Nesne"],
+                correct: 1,
+                explanation: 'Doğru! "Ne zaman kalktı?" sorusuna cevap verir, zaman tamlayıcısıdır.'
+            },
+            {
+                question: '"Kitabı hızlıca okudum." cümlesinde "hızlıca" hangi öğedir?',
+                options: ["Nesne", "Zarf tamlayıcısı", "Belirtili nesne", "Yer tamlayıcısı"],
+                correct: 1,
+                explanation: 'Doğru! "Nasıl okudum?" sorusuna cevap verir, zarf tamlayıcısıdır.'
+            },
+            {
+                question: 'Bir cümlede olmak zorunda OLAN öğe hangisidir?',
+                options: ["Özne", "Yüklem", "Nesne", "Tamlayıcı"],
+                correct: 1,
+                explanation: 'Doğru! Yüklem olmadan cümle olmaz. Diğerleri olmayabilir.'
+            },
+            {
+                question: '"Ödevimi yaptım." cümlesinde nesne var mıdır?',
+                options: ["Evet, ödevimi", "Hayır, nesne yok", "Ödev nesne değil", "Belirsiz"],
+                correct: 0,
+                explanation: 'Doğru! "Neyi yaptım?" sorusuna "Ödevimi" cevabı gelir, belirtili nesnedir.'
+            },
+            {
+                question: '"Eve koşarak geldim." cümlesinde kaç tane öğe vardır?',
+                options: ["2", "3", "4", "5"],
+                correct: 1,
+                explanation: 'Doğru! Yüklem (geldim), yer tamlayıcısı (eve), zarf tamlayıcısı (koşarak) = 3 öğe.'
             }
         ]
     },
-    // KONU 3: Fiil Çatısı
+    // KONU 3: Fiil Çatısı (10 soru)
     {
         name: "Fiil Çatısı",
         questions: [
@@ -105,10 +165,40 @@ const topics = [
                 options: ["Evet", "Hayır", "Bazen", "Duruma göre"],
                 correct: 1,
                 explanation: 'Doğru! "Güzel" fiil değil isimdir, bu yüzden çatı aranmaz.'
+            },
+            {
+                question: '"Kapı açıldı." cümlesi hangi çatıdadır?',
+                options: ["Etken", "Edilgen", "Dönüşlü", "Geçişli"],
+                correct: 1,
+                explanation: 'Doğru! Kim açtı belli değil, edilgen çatıdır.'
+            },
+            {
+                question: '"Kendimi çok yordum." cümlesi hangi çatıdadır?',
+                options: ["Etken", "Edilgen", "Dönüşlü", "İşteş"],
+                correct: 2,
+                explanation: 'Doğru! Eylemi kendine yapıyor (-In eki), dönüşlü çatıdır.'
+            },
+            {
+                question: '"Ali ile Veli dövüştüler." cümlesi hangi çatıdadır?',
+                options: ["Etken", "Edilgen", "Dönüşlü", "İşteş"],
+                correct: 3,
+                explanation: 'Doğru! Eylemi birlikte yapıyorlar (-Iş eki), işteş çatıdır.'
+            },
+            {
+                question: 'Edilgen çatı hangi eklerle yapılır?',
+                options: ["-Il, -In", "-Il, -In, -n", "-mA, -mAk", "-DIr, -t"],
+                correct: 1,
+                explanation: 'Doğru! Edilgen çatı -Il, -In, -n ekleriyle yapılır.'
+            },
+            {
+                question: '"Kitap okunuyor." cümlesinde çatı nedir?',
+                options: ["Etken", "Edilgen", "Dönüşlü", "İşteş"],
+                correct: 1,
+                explanation: 'Doğru! Kim okuyor belli değil, -n eki var, edilgen çatıdır.'
             }
         ]
     },
-    // KONU 4: Sözcükte Anlam
+    // KONU 4: Sözcükte Anlam (10 soru)
     {
         name: "Sözcükte Anlam",
         questions: [
@@ -141,10 +231,40 @@ const topics = [
                 options: ["Eş anlamlı", "Zıt anlamlı", "Sesteş", "Terim"],
                 correct: 2,
                 explanation: 'Doğru! Yazılışları aynı ama anlamları alakasız, sesteştirler.'
+            },
+            {
+                question: '"Atom" kelimesi hangi anlam türündedir?',
+                options: ["Gerçek anlam", "Mecaz anlam", "Terim anlam", "Sesteş"],
+                correct: 2,
+                explanation: 'Doğru! Bilim dilinde özel anlam taşır, terim anlamdır.'
+            },
+            {
+                question: '"Gönlü kırık" ifadesinde "kırık" hangi anlamdadır?',
+                options: ["Gerçek anlam", "Mecaz anlam", "Terim anlam", "Sesteş"],
+                correct: 1,
+                explanation: 'Doğru! Gönül kırılmaz, üzgün anlamına gelir, mecaz anlamdır.'
+            },
+            {
+                question: '"Baş" kelimesinin kaç anlamı vardır?',
+                options: ["1", "2-3", "5-10", "20+"],
+                correct: 3,
+                explanation: 'Doğru! Baş kelimesi çok anlamlıdır: vücut başı, lider, kafa, üst kısım vb.'
+            },
+            {
+                question: 'Güzel - Hoş kelimeleri hangi ilişkidedir?',
+                options: ["Eş anlamlı", "Yakın anlamlı", "Zıt anlamlı", "Sesteş"],
+                correct: 1,
+                explanation: 'Doğru! Tam aynı değil ama yakın anlam taşırlar.'
+            },
+            {
+                question: '"Köprüden önce at yapmayın." sözündeki "at" hangi anlam türündedir?',
+                options: ["Gerçek anlam", "Mecaz anlam", "Terim anlam", "Sesteş"],
+                correct: 1,
+                explanation: 'Doğru! Hayvan atından bahsetmiyor, "plan" anlamında mecazdır.'
             }
         ]
     },
-    // KONU 5: Cümlede Anlam
+    // KONU 5: Cümlede Anlam (10 soru)
     {
         name: "Cümlede Anlam",
         questions: [
@@ -177,10 +297,40 @@ const topics = [
                 options: ["Sebep-sonuç", "Amaç-sonuç", "Koşul-sonuç", "Zıtlık"],
                 correct: 2,
                 explanation: 'Doğru! Bir şeyin olması başka şeye bağlı, koşul-sonuç ilişkisi.'
+            },
+            {
+                question: '"Fakir ama mutluydu." cümlesinde hangi anlam ilişkisi vardır?',
+                options: ["Sebep-sonuç", "Amaç-sonuç", "Zıtlık", "Benzerlik"],
+                correct: 2,
+                explanation: 'Doğru! "Ama" bağlacı zıtlık bildirir, fakir ve mutlu zıt kavramlardır.'
+            },
+            {
+                question: '"Hem güzel hem akıllı." cümlesinde hangi anlam ilişkisi vardır?',
+                options: ["Sıralama", "Zıtlık", "Sebep-sonuç", "Benzerlik"],
+                correct: 0,
+                explanation: 'Doğru! "Hem...hem" iki özelliği sıralar, sıralama ilişkisi vardır.'
+            },
+            {
+                question: '"Çok çalıştı, bu yüzden başarılı oldu." hangi ilişki?',
+                options: ["Sebep-sonuç", "Amaç-sonuç", "Koşul-sonuç", "Zıtlık"],
+                correct: 0,
+                explanation: 'Doğru! İki olay da olmuş, "bu yüzden" sebep-sonuç bildirir.'
+            },
+            {
+                question: '"Zengin olsa da cimridir." cümlesinde hangi ilişki?',
+                options: ["Sebep-sonuç", "Zıtlık (karşıtlık)", "Benzerlik", "Sıralama"],
+                correct: 1,
+                explanation: 'Doğru! "Olsa da" zıtlık bildirir, zengin ama cimri çelişkisi var.'
+            },
+            {
+                question: 'Öznel anlam içeren ifade hangisidir?',
+                options: ["Dünya yuvarlaktır", "Bu film çok güzeldi", "Su 100 derecede kaynar", "Türkiye Asya\'dadır"],
+                correct: 1,
+                explanation: 'Doğru! "Bu film çok güzeldi" kişisel görüştür, öznel anlamdır.'
             }
         ]
     },
-    // KONU 6: Deyimler ve Atasözü
+    // KONU 6: Deyimler ve Atasözü (10 soru)
     {
         name: "Deyimler ve Atasözü",
         questions: [
@@ -213,10 +363,40 @@ const topics = [
                 options: ["Deyim", "Atasözü", "Terim", "İkileme"],
                 correct: 0,
                 explanation: 'Doğru! Bir durumu anlatır, deyimdir.'
+            },
+            {
+                question: '"Ak akçe kara gün içindir" nedir?',
+                options: ["Deyim", "Atasözü", "İkileme", "Terim"],
+                correct: 1,
+                explanation: 'Doğru! Tam cümle, öğüt veriyor, atasözüdür.'
+            },
+            {
+                question: '"Ayağını denk almak" deyiminin anlamı nedir?',
+                options: ["Koşmak", "Dikkatli olmak", "Düşmek", "Yürümek"],
+                correct: 1,
+                explanation: 'Doğru! "Ayağını denk al" dikkatli ol, sakın demektir.'
+            },
+            {
+                question: '"Kulaktan dolma" ne demektir?',
+                options: ["İyi duymak", "Başkasından duyma", "Kulak ağrısı", "Müzik dinlemek"],
+                correct: 1,
+                explanation: 'Doğru! Bilgiyi başkasından duyarak öğrenmek anlamındadır.'
+            },
+            {
+                question: '"Ağaç yaşken eğilir" atasözünün anlamı nedir?',
+                options: ["Ağaç dikmek", "Çocukları küçükken eğitmek", "Spor yapmak", "Bahçecilik"],
+                correct: 1,
+                explanation: 'Doğru! Çocukları küçükken eğitmek gerekir anlamındadır.'
+            },
+            {
+                question: 'Hangisi atasözüdür?',
+                options: ["Gözü dönmek", "Ayağına taş değmesin", "Güneş balçıkla sıvanmaz", "Başına kakamak"],
+                correct: 2,
+                explanation: 'Doğru! "Güneş balçıkla sıvanmaz" tam cümle ve öğüt veren atasözüdür.'
             }
         ]
     },
-    // KONU 7: Cümle Çeşitleri
+    // KONU 7: Cümle Çeşitleri (10 soru)
     {
         name: "Cümle Çeşitleri",
         questions: [
@@ -249,10 +429,40 @@ const topics = [
                 options: ["Basit cümle", "Birleşik cümle", "Sıralı cümle", "Bağlı cümle"],
                 correct: 1,
                 explanation: 'Doğru! Bir yüklem + bir fiilimsi var, birleşik cümledir.'
+            },
+            {
+                question: '"Gel!" hangi cümle türüdür?',
+                options: ["Ünlem cümlesi", "Emir cümlesi", "Soru cümlesi", "Haber cümlesi"],
+                correct: 1,
+                explanation: 'Doğru! Emir kipi var, emir cümlesidir.'
+            },
+            {
+                question: '"Okudum, yazdım, çalıştım." hangi cümle türüdür?',
+                options: ["Basit cümle", "Birleşik cümle", "Sıralı cümle", "Bağlı cümle"],
+                correct: 2,
+                explanation: 'Doğru! Virgüllerle ayrılmış 3 yüklem var, sıralı cümledir.'
+            },
+            {
+                question: '"Yağmur yağdığı için çıkmadım." hangi cümle türüdür?',
+                options: ["Basit cümle", "Birleşik cümle", "Sıralı cümle", "Bağlı cümle"],
+                correct: 3,
+                explanation: 'Doğru! İki yüklem bağlaçla bağlı, bağlı cümledir.'
+            },
+            {
+                question: '"Ne güzel hava!" hangi cümle türüdür?',
+                options: ["Haber cümlesi", "Soru cümlesi", "Emir cümlesi", "Ünlem cümlesi"],
+                correct: 3,
+                explanation: 'Doğru! Duygu ve heyecan var, ünlem cümlesidir.'
+            },
+            {
+                question: '"Burası okul." cümlesinde yüklem hangisidir?',
+                options: ["Burası", "Okul", "Burası okul", "Yüklem yok"],
+                correct: 1,
+                explanation: 'Doğru! "Okul" isim yüklemdir. "Ne?" sorusuna cevap verir.'
             }
         ]
     },
-    // KONU 8: Yazım Kuralları
+    // KONU 8: Yazım Kuralları (10 soru)
     {
         name: "Yazım Kuralları",
         questions: [
@@ -285,10 +495,40 @@ const topics = [
                 options: ["Evdekiler", "Evdeki ler", "Ev dekiler", "Fark etmez"],
                 correct: 0,
                 explanation: 'Doğru! "-ler" gelince "Evdekiler" anlamlı, o yüzden bitişik: "Evdeki"'
+            },
+            {
+                question: '"Türkçe" mi "türkçe" mi yazmalıyız?',
+                options: ["Türkçe", "türkçe", "Her ikisi doğru", "TÜRKÇE"],
+                correct: 1,
+                explanation: 'Doğru! Dil adları küçük harfle başlar: türkçe, ingilizce, arapça'
+            },
+            {
+                question: '"Geldi mi?" sorusunda "mı" neden ayrı?',
+                options: ["Soru eki", "Bağlaç", "Edat", "İsim"],
+                correct: 0,
+                explanation: 'Doğru! Soru eki olduğu için ayrı yazılır.'
+            },
+            {
+                question: '"Gelecek yıl" mı "Gelecek-yıl" mı?',
+                options: ["Gelecek yıl (ayrı)", "Gelecek-yıl (tire)", "Gelecekyıl (bitişik)", "Hepsi doğru"],
+                correct: 0,
+                explanation: 'Doğru! Zaman belirten kelimeler ayrı yazılır: gelecek yıl, bu gün.'
+            },
+            {
+                question: '"Büyükşehir" mi "Büyük şehir" mi?',
+                options: ["Büyükşehir (bitişik)", "Büyük şehir (ayrı)", "Büyük-şehir (tire)", "Fark etmez"],
+                correct: 0,
+                explanation: 'Doğru! Kalıplaşmış birleşik kelimeler bitişik yazılır: büyükşehir, başkent.'
+            },
+            {
+                question: '"Bunun ki" mi "Bunun-ki" mi "Bununki" mi?',
+                options: ["Bunun ki (ayrı)", "Bunun-ki (tire)", "Bunki (bitişik)", "Bunun-ki (bitişik)"],
+                correct: 0,
+                explanation: 'Doğru! "ki" iyelik eki olarak kullanılınca ayrı yazılır: benimki, seninki.'
             }
         ]
     },
-    // YENİ KONU 9: Paragraf
+    // KONU 9: Paragraf (10 soru)
     {
         name: "Paragraf",
         questions: [
@@ -321,10 +561,40 @@ const topics = [
                 options: ["Kendi fikrini katma", "Her zaman uzun cevap ver", "İlk şık doğrudur", "Hızlı oku"],
                 correct: 0,
                 explanation: 'Doğru! Yazar "Gökyüzü yeşil" diyorsa, o sorunun cevabı "yeşil"dir. Kendi doğrularını bırak!'
+            },
+            {
+                question: 'Paragrafın "Gelişme" bölümü ne işe yarar?',
+                options: ["Konuya giriş yapar", "Detayları anlatır", "Sonuç verir", "Öğüt verir"],
+                correct: 1,
+                explanation: 'Doğru! Gelişme bölümünde olayın detayları, örnekler anlatılır.'
+            },
+            {
+                question: 'Öyküleme tekniğinin özelliği nedir?',
+                options: ["Bilgi verir", "Olay anlatır", "Resim çizer", "Fikir savunur"],
+                correct: 1,
+                explanation: 'Doğru! Öyküleme bir olay anlatır, içinde hareket vardır.'
+            },
+            {
+                question: 'Betimleme tekniğinde ne yapılır?',
+                options: ["Bilgi verilir", "Olay anlatılır", "Kelimelerle resim çizilir", "Tartışılır"],
+                correct: 2,
+                explanation: 'Doğru! Betimleme kelimelerle resim çizer, okurken gözünde canlanır.'
+            },
+            {
+                question: 'Tartışma tekniğinde yazar ne yapar?',
+                options: ["Bilgi verir", "Olay anlatır", "Kendi fikrini ispatlar", "Resim çizer"],
+                correct: 2,
+                explanation: 'Doğru! Tartışma tekniğinde yazar kendi fikrini kanıtlarla savunur.'
+            },
+            {
+                question: 'Ana düşünce genelde nerede bulunur?',
+                options: ["İlk cümlede", "Son cümlede", "Ortada", "Her yerde olabilir"],
+                correct: 3,
+                explanation: 'Doğru! Ana düşünce paragrafın başında, ortasında veya sonunda olabilir.'
             }
         ]
     },
-    // YENİ KONU 10: Sözel Muhakeme
+    // KONU 10: Sözel Muhakeme (10 soru)
     {
         name: "Sözel Muhakeme",
         questions: [
@@ -357,10 +627,40 @@ const topics = [
                 options: ["Başlıkta", "Ortada", "Küçük detaylarda", "Her yerde eşit"],
                 correct: 2,
                 explanation: 'Doğru! İnfografiklerde köşelerdeki, kenarlardaki ufak notlar çok önemlidir!'
+            },
+            {
+                question: '"A, B\'den pahalıdır. B, C\'den ucuzdur." En ucuz hangisi?',
+                options: ["A", "B", "C", "Bilgi yetersiz"],
+                correct: 2,
+                explanation: 'Doğru! A > B > C fiyat sıralaması var. En ucuz C.'
+            },
+            {
+                question: 'Çubuk grafiğinde hangi eksen miktarı gösterir?',
+                options: ["X ekseni (yatay)", "Y ekseni (dikey)", "Her ikisi", "Hiçbiri"],
+                correct: 1,
+                explanation: 'Doğru! Y ekseni (dikey) genelde miktarı gösterir.'
+            },
+            {
+                question: '"Ayşe Ali\'den hızlı koşar. Mehmet Ayşe\'den yavaş koşar." En hızlı kim?',
+                options: ["Ayşe", "Ali", "Mehmet", "Bilgi yetersiz"],
+                correct: 0,
+                explanation: 'Doğru! Ayşe > Ali ve Ayşe > Mehmet. En hızlı Ayşe.'
+            },
+            {
+                question: 'Tablo okurken ilk bakılması gereken yer neresidir?',
+                options: ["Başlık", "Sayılar", "Renkler", "Alt not"],
+                correct: 0,
+                explanation: 'Doğru! Tablonun başlığı ne hakkında olduğunu söyler, önce ona bakılır.'
+            },
+            {
+                question: '"100 öğrenciden 60\'ı kız" ifadesi yüzde kaçtır?',
+                options: ["%50", "%60", "%70", "%40"],
+                correct: 1,
+                explanation: 'Doğru! 60/100 = %60 kız öğrenci var.'
             }
         ]
     },
-    // YENİ KONU 11: Noktalama İşaretleri
+    // KONU 11: Noktalama İşaretleri (10 soru)
     {
         name: "Noktalama İşaretleri",
         questions: [
@@ -393,10 +693,40 @@ const topics = [
                 options: ["Cümle bitirir", "Virgüllerle ayrılmış grupları ayırır", "Soru sorar", "Ünlem yapar"],
                 correct: 1,
                 explanation: 'Doğru! Noktalı virgül "Virgül yetmedi, ben geldim" der ve büyük grupları ayırır.'
+            },
+            {
+                question: 'Üç nokta (...) ne zaman kullanılır?',
+                options: ["Cümle bitince", "Söz yarıda kesilince", "Soru sorulunca", "Ünlem yapılınca"],
+                correct: 1,
+                explanation: 'Doğru! Üç nokta cümlenin tamamlanmadığını veya düşüncenin devam ettiğini gösterir.'
+            },
+            {
+                question: 'Tırnak işareti (" ") ne zaman kullanılır?',
+                options: ["Cümle sonunda", "Doğrudan söz aktarılırken", "Her zaman", "Hiçbir zaman"],
+                correct: 1,
+                explanation: 'Doğru! Birinin sözünü aynen aktarırken tırnak kullanılır.'
+            },
+            {
+                question: 'Kısa çizgi (-) ne işe yarar?',
+                options: ["Kelime bölmek", "Cümle bitirmek", "Soru sormak", "Ünlem yapmak"],
+                correct: 0,
+                explanation: 'Doğru! Satır sonunda kelime sığmazsa kısa çizgiyle böleriz.'
+            },
+            {
+                question: 'Uzun tire (—) ne zaman kullanılır?',
+                options: ["Cümle sonu", "Konuşma çizgisi olarak", "Soru işareti yerine", "Virgül yerine"],
+                correct: 1,
+                explanation: 'Doğru! Diyaloglarda konuşanı göstermek için uzun tire kullanılır.'
+            },
+            {
+                question: 'Parantez ( ) ne işe yarar?',
+                options: ["Cümle bitirmek", "Açıklama eklemek", "Soru sormak", "Vurgulama yapmak"],
+                correct: 1,
+                explanation: 'Doğru! Parantez içine cümle dışında ek bilgi, açıklama konur.'
             }
         ]
     },
-    // YENİ KONU 12: Anlatım Bozuklukları
+    // KONU 12: Anlatım Bozuklukları (10 soru)
     {
         name: "Anlatım Bozuklukları",
         questions: [
@@ -429,10 +759,40 @@ const topics = [
                 options: ["Mantık ve sıralama hatası", "Noktalama yanlış", "Kelime eksik", "Doğru cümle"],
                 correct: 0,
                 explanation: 'Doğru! Üniversite kazanmak daha zor. "Bırakın üniversiteyi, ders bile çalışamaz" olmalı.'
+            },
+            {
+                question: '"Tekrar yeniden söyledi." cümlesindeki hata nedir?',
+                options: ["Gereksiz sözcük", "Yanlış anlam", "Mantık hatası", "Doğru cümle"],
+                correct: 0,
+                explanation: 'Doğru! "Tekrar" ve "yeniden" aynı anlamda, biri gereksiz!'
+            },
+            {
+                question: '"Onun sesini yükseltti." cümlesi neden yanlış?',
+                options: ["Ses yükselmez, çıkar", "Doğru cümle", "Özne yok", "Virgül eksik"],
+                correct: 0,
+                explanation: 'Doğru! "Sesini yükseltti" değil, "sesini yükseltti" veya "sesi yükseldi" olmalı.'
+            },
+            {
+                question: '"Mutlaka kesin gelecek." cümlesindeki sorun nedir?',
+                options: ["Gereksiz sözcük", "Yanlış anlam", "Mantık hatası", "Doğru cümle"],
+                correct: 0,
+                explanation: 'Doğru! "Mutlaka" ve "kesin" aynı anlama gelir, biri gereksiz.'
+            },
+            {
+                question: '"İhtimal belki gelir." cümlesinde ne hata var?',
+                options: ["Gereksiz sözcük", "Yanlış anlam", "Mantık hatası", "Doğru cümle"],
+                correct: 0,
+                explanation: 'Doğru! "İhtimal" ve "belki" aynı anlama gelir, laf kalabalığı!'
+            },
+            {
+                question: '"Her adam kişi geldi." cümlesindeki hata nedir?',
+                options: ["Gereksiz sözcük", "Yanlış anlam", "Mantık hatası", "Doğru cümle"],
+                correct: 0,
+                explanation: 'Doğru! "Adam" ve "kişi" aynı anlamda, biri gereksiz!'
             }
         ]
     },
-    // YENİ KONU 13: Söz Sanatları
+    // KONU 13: Söz Sanatları (10 soru)
     {
         name: "Söz Sanatları",
         questions: [
@@ -465,10 +825,40 @@ const topics = [
                 options: ["Benzetme", "Kişileştirme", "Karşıtlık", "Abartma"],
                 correct: 3,
                 explanation: 'Doğru! Dünya kadar sevmek mümkün mü? Aşırı büyütme var, bu abartmadır (mübalağa).'
+            },
+            {
+                question: '"Rüzgar ağaçlarla dans ediyordu." hangi söz sanatıdır?',
+                options: ["Benzetme", "Kişileştirme", "Abartma", "Karşıtlık"],
+                correct: 1,
+                explanation: 'Doğru! Rüzgar dans edemez, insan özelliği verilmiş, kişileştirme!'
+            },
+            {
+                question: '"Açlıktan öleceğim." hangi söz sanatıdır?',
+                options: ["Benzetme", "Kişileştirme", "Abartma", "Karşıtlık"],
+                correct: 2,
+                explanation: 'Doğru! Açlıktan hemen ölünmez ama aşırı abartma var, mübalağadır.'
+            },
+            {
+                question: '"Kar gibi temiz bir kalp." hangi söz sanatıdır?',
+                options: ["Benzetme", "Kişileştirme", "Abartma", "Konuşturma"],
+                correct: 0,
+                explanation: 'Doğru! "Gibi" var, kalp kara benzetiliyor, benzetmedir.'
+            },
+            {
+                question: '"Zengin ama mutsuz." cümlesinde hangi sanat vardır?',
+                options: ["Benzetme", "Kişileştirme", "Karşıtlık", "Abartma"],
+                correct: 2,
+                explanation: 'Doğru! Zengin ve mutsuz çelişir, karşıtlık (tezat) var.'
+            },
+            {
+                question: 'Ağaç "Kesilmeyin!" diye bağırdı. Hangi sanat?',
+                options: ["Kişileştirme", "Benzetme", "Konuşturma", "Abartma"],
+                correct: 2,
+                explanation: 'Doğru! Ağaç konuşuyor ve tırnak içinde, bu konuşturmadır (intak).'
             }
         ]
     },
-    // YENİ KONU 14: Metin Türleri
+    // KONU 14: Metin Türleri (10 soru)
     {
         name: "Metin Türleri",
         questions: [
@@ -501,6 +891,36 @@ const topics = [
                 options: ["Otobiyografi", "Biyografi", "Anı", "Günlük"],
                 correct: 1,
                 explanation: 'Doğru! Biyografi = Başkasının hayatı. Otobiyografi = Kendi hayatın.'
+            },
+            {
+                question: 'Bilimsel kanıtlarla fikir savunan metin türü nedir?',
+                options: ["Deneme", "Makale", "Hikaye", "Şiir"],
+                correct: 1,
+                explanation: 'Doğru! Makale bilimsel, kanıt kullanır ve ciddidir.'
+            },
+            {
+                question: 'Uzun, çok karakterli olay metni nedir?',
+                options: ["Hikaye", "Roman", "Masal", "Fabl"],
+                correct: 1,
+                explanation: 'Doğru! Roman hikayenin uzun versiyonudur, çok karakter ve olay vardır.'
+            },
+            {
+                question: '"Gençliğimde şöyleydi..." diye başlayan metin türü nedir?',
+                options: ["Günlük", "Anı (Hatıra)", "Biyografi", "Otobiyografi"],
+                correct: 1,
+                explanation: 'Doğru! Anı (hatıra) geçmiş olayları zaman sonra anlatır.'
+            },
+            {
+                question: 'Devler, periler, sihir olan metin türü nedir?',
+                options: ["Hikaye", "Roman", "Masal", "Makale"],
+                correct: 2,
+                explanation: 'Doğru! Masal hayal ürünü, sihirli olaylar içerir.'
+            },
+            {
+                question: 'Gazetedeki günlük yazı türü nedir?',
+                options: ["Makale", "Fıkra (köşe yazısı)", "Deneme", "Hikaye"],
+                correct: 1,
+                explanation: 'Doğru! Fıkra gazetelerdeki günlük kısa yazılardır (gülmece değil!).'
             }
         ]
     }
@@ -517,7 +937,7 @@ let completedTopicsCount = parseInt(localStorage.getItem('completedTopics') || '
 function updateMainScore() {
     document.getElementById('totalScore').textContent = totalScore;
     document.getElementById('completedTopics').textContent = completedTopicsCount + '/14';
-    const rate = completedTopicsCount > 0 ? Math.round((totalScore / (completedTopicsCount * 500)) * 100) : 0;
+    const rate = completedTopicsCount > 0 ? Math.round((totalScore / (completedTopicsCount * 1000)) * 100) : 0;
     document.getElementById('successRate').textContent = rate + '%';
 }
 
@@ -538,12 +958,12 @@ function loadQuestion() {
     const topic = topics[currentTopic];
     const question = topic.questions[currentQuestion];
 
-    document.getElementById('questionNumber').textContent = (currentQuestion + 1) + '/5';
+    document.getElementById('questionNumber').textContent = (currentQuestion + 1) + '/10';
     document.getElementById('currentScore').textContent = score;
     document.getElementById('correctCount').textContent = correctAnswers;
     document.getElementById('questionText').textContent = question.question;
 
-    const progress = ((currentQuestion + 1) / 5) * 100;
+    const progress = ((currentQuestion + 1) / 10) * 100;
     document.getElementById('progressBar').style.width = progress + '%';
 
     const optionsContainer = document.getElementById('optionsContainer');
@@ -606,7 +1026,7 @@ function checkAnswer() {
 
 function nextQuestion() {
     currentQuestion++;
-    if (currentQuestion < 5) {
+    if (currentQuestion < 10) {
         loadQuestion();
     } else {
         showResults();
@@ -615,7 +1035,7 @@ function nextQuestion() {
 
 function showResults() {
     totalScore += score;
-    if (score >= 300) {
+    if (score >= 600) {
         completedTopicsCount++;
     }
     localStorage.setItem('totalScore', totalScore);
@@ -624,7 +1044,7 @@ function showResults() {
     document.querySelector('.game-screen').classList.remove('active');
     document.querySelector('.result-screen').classList.add('active');
 
-    const percentage = (correctAnswers / 5) * 100;
+    const percentage = (correctAnswers / 10) * 100;
     let emoji = '🎉';
     let title = 'Tebrikler!';
     let message = '';
@@ -650,7 +1070,7 @@ function showResults() {
     document.getElementById('resultEmoji').textContent = emoji;
     document.getElementById('resultTitle').textContent = title;
     document.getElementById('resultMessage').textContent = message;
-    document.getElementById('totalQuestions').textContent = '5';
+    document.getElementById('totalQuestions').textContent = '10';
     document.getElementById('finalCorrect').textContent = correctAnswers;
     document.getElementById('finalScore').textContent = score;
 }
